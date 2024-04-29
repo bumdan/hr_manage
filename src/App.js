@@ -1,6 +1,8 @@
 import React from 'react';
 import Home from './components/Home';
 import Employee from './components/Employee';
+import Position from './components/position';
+import Details from './components/Details';
 import Add from './components/Add';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -9,9 +11,11 @@ const App = () => {
     <>
     <Router>
       <Routes>
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='/add_employee' element={<Add/>}/>
         <Route path='/employee' element={<Employee/>}/>
+        <Route path='/position' element={<Position/>}/>
+        <Route path='/details' element={<Details/>}/>
       </Routes>
     </Router>
     </>

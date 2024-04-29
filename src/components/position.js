@@ -1,13 +1,13 @@
 import React from "react";
 import NavBar from "./navbar/NavBar";
 
-const Home = () => {
+function Position() {
     return (
         <>
         <NavBar/>
-         <h1>Home</h1>
+        <h1>Position</h1>
         </>
     );
 };
 
-export default Home;
+export default Position;

@@ -1,0 +1,10 @@
+.table-container {
+    border: 2px solid whitesmoke;
+}
+
+.employee-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  

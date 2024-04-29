@@ -20,7 +20,7 @@ const NavBar = () => {
     <AppBar position='static'>
       <Toolbar>
         <Typography variant='h5' sx={{ flexGrow: 1 }}>
-          <Button color='inherit' component={Link} to="/home">
+          <Button color='inherit' component={Link} to="/">
             {/* <img src='' alt='Icon' style={{width: '200px', height: '50px'}}/> */}
             Super Juniors
           </Button>
@@ -45,7 +45,9 @@ const NavBar = () => {
           <Button color='inherit' component={Link} to="/add_employee">
             Add Employee
             </Button>
-          <Button color='inherit'>Position</Button>
+          <Button color='inherit' component={Link} to="/position">
+            Position
+            </Button>
         </Typography>
         <Tooltip title="Profile">
         <IconButton
