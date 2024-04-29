@@ -65,7 +65,7 @@ const NavBar = () => {
           onClose={handleMenuClose}
         >
           <MenuItem>Bum Dan La Aung</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Logout&nbsp;&nbsp;<PowerSettingNewIcon/></MenuItem>
+          <MenuItem onClick={handleMenuClose} component={Link} to="/login">Logout&nbsp;&nbsp;<PowerSettingNewIcon/></MenuItem>
         </Menu>
       </Toolbar>
     </AppBar>

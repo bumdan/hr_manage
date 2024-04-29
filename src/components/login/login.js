@@ -1,10 +1,12 @@
 import React from "react";
 import { Button, Dialog, DialogTitle, DialogContent, TextField, DialogActions } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
+    const open = true;
     return (
         <>
-        <Dialog>
+        <Dialog open={open}>
             <DialogTitle>Login</DialogTitle>
             <DialogContent>
                 <TextField
@@ -19,7 +21,7 @@ const Login = () => {
                 />
             </DialogContent>
             <DialogActions>
-                <Button color="primary">Login</Button>
+                <Button color="primary" component={Link} to="/">Login</Button>
             </DialogActions>
         </Dialog>
         </>

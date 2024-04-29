@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Employee from './components/Employee';
 import Position from './components/position';
 import Details from './components/Details';
+import Login from './components/login/login';
 import Add from './components/Add';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/employee' element={<Employee/>}/>
         <Route path='/position' element={<Position/>}/>
         <Route path='/details' element={<Details/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
     </Router>
     </>
