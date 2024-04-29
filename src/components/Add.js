@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import NavBar from "./navbar/NavBar";
-import { Button, Container, Dialog, DialogActions, DialogContent, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material";
+import { Button, Container, DialogActions, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material";
 
 function Add() {
 
     const [jobTitle, setJobTitle] = useState("");
-    const open = true;
 
     const handleChange = (event) => {
         setJobTitle(event.target.value);
