@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./navbar/NavBar";
-import { Container, Grid, IconButton, TextField, Tooltip, Typography } from "@mui/material";
+import Footer from "./navbar/Footer";
+import { Avatar, Container, Grid, IconButton, TextField, Tooltip, Typography } from "@mui/material";
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import { Link } from 'react-router-dom';
 import "./component.css";
@@ -24,25 +25,40 @@ const Details = () => {
 
                 <form>
                     <Grid container spacing={2}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={6} className="profile">
+                                <Avatar
+                                 alt="Employee Profile" 
+                                 src="logo512.png" 
+                                 sx={{
+                                    width: 150,
+                                    height: 150,
+                                    borderRadius: '50%',
+                                 }}
+                                 />
+                            </Grid>
                         <Grid item xs={6}>
-                            <Typography gutterBottom>
-                                First Name
-                            </Typography>
-                            <TextField
-                                fullWidth
-                                label="Bum Dan"
-                                disabled
-                            />
+                            <Grid fullWidth>
+                                <Typography gutterBottom>
+                                    First Name
+                                </Typography>
+                                <TextField
+                                    fullWidth
+                                    label="Bum Dan"
+                                    disabled
+                                />
+                            </Grid>
+                            <Grid fullWidth>
+                                <Typography gutterBottom>
+                                        Last Name
+                                </Typography>
+                                <TextField
+                                    fullWidth
+                                    label="La Aung"
+                                    disabled
+                                />
+                            </Grid>
                         </Grid>
-                        <Grid item xs={6}>
-                            <Typography gutterBottom>
-                                    Last Name
-                            </Typography>
-                            <TextField
-                                fullWidth
-                                label="La Aung"
-                                disabled
-                            />
                         </Grid>
                         <Grid item xs={6}>
                         <Typography gutterBottom>
@@ -189,7 +205,10 @@ const Details = () => {
                         </Grid>
                     </Grid>
                 </form>
+                <Typography variant="h4" gutterBottom color="primary">
+                </Typography>
             </Container>
+            <Footer/>
         </>
     );
 };

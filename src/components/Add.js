@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 import NavBar from "./navbar/NavBar";
-import { Button, Container, DialogActions, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material";
+import Footer from "./navbar/Footer";
+import { Avatar, Button, Container, DialogActions, FormControl, Grid, MenuItem, Select, TextField, Typography } from "@mui/material";
+import "./component.css";
 
 function Add() {
-
     const [jobTitle, setJobTitle] = useState("");
+    const [profileImage, setProfileImage] = useState(null);
 
     const handleChange = (event) => {
         setJobTitle(event.target.value);
+    };
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setProfileImage(reader.result);
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
     };
 
     return (
@@ -19,23 +32,49 @@ function Add() {
                 </Typography>
                 <form>
                     <Grid container spacing={2}>
-                        <Grid item xs={6}>
+                    <Grid container spacing={2}>
+                        <Grid item xs={6} >
                             <Typography gutterBottom>
-                                First Name
+                                Add Profile
                             </Typography>
-                            <TextField
-                                fullWidth
-                                placeholder="First Name"
+                            <input
+                                type="file"
+                                accept="image/*"
+                                onChange={handleImageChange}
                             />
+                            <></>
+                            {profileImage && (
+                                <Avatar 
+                                    alt="Employee Profile"
+                                    src={profileImage}
+                                    sx={{
+                                        width: 100,
+                                        height: 100,
+                                        borderRadius: '50%',
+                                    }}
+                                />
+                            )}
                         </Grid>
                         <Grid item xs={6}>
-                            <Typography gutterBottom>
-                                Last Name
-                            </Typography>
-                            <TextField
-                                fullWidth
-                                placeholder="Last Name"
-                            />
+                            <Grid fullWidth>
+                                <Typography gutterBottom>
+                                    First Name
+                                </Typography>
+                                <TextField
+                                    fullWidth
+                                    placeholder="First Name"
+                                />
+                            </Grid>
+                            <Grid fullWidth>
+                                <Typography gutterBottom>
+                                    Last Name
+                                </Typography>
+                                <TextField
+                                    fullWidth
+                                    placeholder="Last Name"
+                                />
+                            </Grid>
+                        </Grid>
                         </Grid>
                         <Grid item xs={6}>
                             <Typography gutterBottom>
@@ -217,6 +256,7 @@ function Add() {
             </Button>        
             </DialogActions>
             </Container>
+            <Footer/>
         </>
     );
 };

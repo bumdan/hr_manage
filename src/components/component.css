@@ -8,3 +8,8 @@
     align-items: center;
 }
   
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

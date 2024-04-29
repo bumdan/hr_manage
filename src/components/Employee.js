@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import NavBar from "./navbar/NavBar";
+import Footer from "./navbar/Footer";
 import { Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
 import { Typography, TextField, Grid, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip  } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
@@ -31,7 +32,9 @@ const Employee = () => {
             <NavBar />
 
             <div className="employee-lists">
-                <h2>Employee Lists</h2>
+                <Typography gutterBottom color="primary">
+                  <h2>  Employee Lists </h2>
+                </Typography>
             </div>
 
             <Dialog open={editForm}>
@@ -256,6 +259,7 @@ const Employee = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <Footer/>
         </>
     );
 };
