@@ -32,9 +32,11 @@ const Employee = () => {
             <NavBar />
 
             <div className="employee-lists">
+                <h2>
                 <Typography gutterBottom color="primary">
-                  <h2>  Employee Lists </h2>
+                  Employee Lists
                 </Typography>
+                </h2>
             </div>
 
             <Dialog open={editForm}>

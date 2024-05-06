@@ -25,11 +25,13 @@ function Add() {
 
     return (
         <>
-            <NavBar />
+            <NavBar/>
             <Container>
                 <Typography variant="h4" gutterBottom color="primary">
                     Employee Information Form
                 </Typography>
+                <div className="space">
+                </div>
                 <form>
                     <Grid container spacing={2}>
                     <Grid container spacing={2}>
@@ -56,7 +58,7 @@ function Add() {
                             )}
                         </Grid>
                         <Grid item xs={6}>
-                            <Grid fullWidth>
+                            <Grid>
                                 <Typography gutterBottom>
                                     First Name
                                 </Typography>
@@ -65,7 +67,7 @@ function Add() {
                                     placeholder="First Name"
                                 />
                             </Grid>
-                            <Grid fullWidth>
+                            <Grid>
                                 <Typography gutterBottom>
                                     Last Name
                                 </Typography>
@@ -153,7 +155,6 @@ function Add() {
                             </Typography>
                             <FormControl fullWidth>
                                 <Select
-                                    fullWidth
                                     value={jobTitle}
                                     onChange={handleChange}
                                     placeholder="Job Title"
@@ -195,6 +196,7 @@ function Add() {
                                 <Select
                                     fullWidth
                                     placeholder="Department"
+                                    value=""
                                 >
                                     <MenuItem value="RnD">RnD</MenuItem>
                                     <MenuItem value="Admin">Admin</MenuItem>
@@ -211,6 +213,7 @@ function Add() {
                                 <Select
                                     fullWidth
                                     placeholder="Team"
+                                    value=""
                                 >
                                     <MenuItem value="PlatForm Systme">PlatForm System</MenuItem>
                                     <MenuItem value="Reception">Reception</MenuItem>
@@ -237,6 +240,7 @@ function Add() {
                                 <Select
                                     fullWidth
                                     placeholder="Position"
+                                    value=""
                                 >
                                     <MenuItem value="Software Engineer">Software Engineer</MenuItem>
                                     <MenuItem value="UI/UX Designer">UI/UX Designer</MenuItem>

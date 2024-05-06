@@ -17,7 +17,7 @@ const Details = () => {
                     </IconButton>
                 </Link>
             </Tooltip>
-            <Container>
+            <Container className="table-container">
 
                 <Typography variant="h4" gutterBottom color="primary">
                     Employee Information Form
@@ -38,7 +38,7 @@ const Details = () => {
                                  />
                             </Grid>
                         <Grid item xs={6}>
-                            <Grid fullWidth>
+                            <Grid>
                                 <Typography gutterBottom>
                                     First Name
                                 </Typography>
@@ -48,7 +48,7 @@ const Details = () => {
                                     disabled
                                 />
                             </Grid>
-                            <Grid fullWidth>
+                            <Grid>
                                 <Typography gutterBottom>
                                         Last Name
                                 </Typography>

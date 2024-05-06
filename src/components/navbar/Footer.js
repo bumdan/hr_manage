@@ -30,13 +30,13 @@ const Footer = () => {
             <Typography variant="h6" color="textSecondary">
               Follow Us
             </Typography>
-            <Link href="https://www.facebook.com/home.php" color="primary" sx={{ marginRight: 1 }}>
+            <Link href="https://zcs.frontiir.net/#1" color="primary" sx={{ marginRight: 1 }}>
               <FacebookIcon fontSize="small" />
             </Link>
-            <Link href="#" color="primary" sx={{ marginRight: 1 }}>
+            <Link href="https://dreamlab.news/books/the-7-habits-of-highly-effective-people-2" color="primary" sx={{ marginRight: 1 }}>
               <TwitterIcon fontSize="small" />
             </Link>
-            <Link href="https://www.instagram.com" color="error">
+            <Link href="https://github.com/" color="error">
               <InstagramIcon fontSize="small" />
             </Link>
           </Grid>
